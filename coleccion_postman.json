@@ -1,0 +1,128 @@
+{
+    "info": {
+        "name": "EVA2_Benja_API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Clima",
+            "item": [
+                {
+                    "name": "Listar Todo",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://localhost:3000/clima"
+                    }
+                },
+                {
+                    "name": "Buscar por ID",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://localhost:3000/clima/1"
+                    }
+                },
+                {
+                    "name": "Crear Estación",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\\n    \\\"nombre_estacion\\\": \\\"Hornopirén Test\\\",\\n    \\\"latitud\\\": -41.96,\\n    \\\"longitud\\\": -72.43,\\n    \\\"altitud_metros\\\": 10,\\n    \\\"ciudad\\\": \\\"Hornopirén\\\",\\n    \\\"activa\\\": true\\n}"
+                        },
+                        "url": "http://localhost:3000/clima"
+                    }
+                },
+                {
+                    "name": "Actualizar Estación",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\\n    \\\"nombre_estacion\\\": \\\"Hornopirén Update\\\",\\n    \\\"latitud\\\": -41.00,\\n    \\\"longitud\\\": -72.00,\\n    \\\"altitud_metros\\\": 15,\\n    \\\"ciudad\\\": \\\"Hornopirén\\\",\\n    \\\"activa\\\": false\\n}"
+                        },
+                        "url": "http://localhost:3000/clima/1"
+                    }
+                },
+                {
+                    "name": "Eliminar Estación",
+                    "request": {
+                        "method": "DELETE",
+                        "url": "http://localhost:3000/clima/1"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Gimnasio",
+            "item": [
+                {
+                    "name": "Listar Todo",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://localhost:3000/gimnasio"
+                    }
+                },
+                {
+                    "name": "Buscar por ID",
+                    "request": {
+                        "method": "GET",
+                        "url": "http://localhost:3000/gimnasio/1"
+                    }
+                },
+                {
+                    "name": "Crear Membresía",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\\n    \\\"socio_nombre\\\": \\\"Benja Tampier\\\",\\n    \\\"plan\\\": \\\"Mensual\\\",\\n    \\\"fecha_inicio\\\": \\\"2026-05-10\\\",\\n    \\\"fecha_fin\\\": \\\"2026-06-10\\\",\\n    \\\"costo_mensual\\\": 25000,\\n    \\\"acceso_ilimitado\\\": true\\n}"
+                        },
+                        "url": "http://localhost:3000/gimnasio"
+                    }
+                },
+                {
+                    "name": "Actualizar Membresía",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\\n    \\\"socio_nombre\\\": \\\"Benja Editado\\\",\\n    \\\"plan\\\": \\\"Anual\\\",\\n    \\\"fecha_inicio\\\": \\\"2026-05-10\\\",\\n    \\\"fecha_fin\\\": \\\"2027-05-10\\\",\\n    \\\"costo_mensual\\\": 20000,\\n    \\\"acceso_ilimitado\\\": true\\n}"
+                        },
+                        "url": "http://localhost:3000/gimnasio/1"
+                    }
+                },
+                {
+                    "name": "Eliminar Membresía",
+                    "request": {
+                        "method": "DELETE",
+                        "url": "http://localhost:3000/gimnasio/1"
+                    }
+                }
+            ]
+        }
+    ]
+}
